@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "306777774444",
+    "project_id": "leanplumandroidreal",
+    "storage_bucket": "leanplumandroidreal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306777774444:android:91ad8f0adb79af5c0d3b49",
+        "android_client_info": {
+          "package_name": "com.hadia.leanplumandroidreal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306777774444-9dpf1fush2tn9ssb1pu50ndpl7r55n77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKw5GozhXI9CQA5vFE8u2sEVuntEmHbyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306777774444-9dpf1fush2tn9ssb1pu50ndpl7r55n77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
