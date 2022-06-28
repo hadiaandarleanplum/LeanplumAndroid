@@ -1,7 +1,14 @@
 package com.hadia.leanplumandroidreal;
 
 import android.app.Application;
+import android.app.Notification;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
 
 import com.leanplum.Leanplum;
 
@@ -9,12 +16,16 @@ import com.leanplum.Leanplum;
 import com.leanplum.LeanplumActivityHelper;
 
 import com.leanplum.LeanplumApplication;
+import com.leanplum.LeanplumPushService;
 import com.leanplum.Var;
 import com.leanplum.annotations.Parser;
+import com.leanplum.LeanplumPushNotificationCustomizer;
 import com.leanplum.annotations.Variable;
 import com.leanplum.callbacks.StartCallback;
 import com.leanplum.callbacks.VariablesChangedCallback;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -50,6 +61,22 @@ public class ApplicationClass extends Application {
         } else {
             Leanplum.setAppIdForProductionMode("app_IF2eLLGxH8jme6fyd4qe3AnJDPuyuV2W6mYLMORepkQ", "dev_08KT3uYYrZdwku6wgMOiZywlYETW6r8j9XetCriYdlM");
         }
+
+        //Custom push notif
+        LeanplumPushService.setCustomizer(new LeanplumPushNotificationCustomizer() {
+            @Override
+            public void customize(NotificationCompat.Builder builder, Bundle notificationPayload) {
+                Log.i("### LP " , "notification customized");
+                // Setting a custom smallIcon included in the Drawable folder
+                builder.setSmallIcon(R.drawable.gamebgimg);
+
+
+            }
+            @Override
+            public void customize(Notification.Builder builder, Bundle bundle, @Nullable Notification.Style style) {
+
+            }
+        });
 
         //set variables
         //Var<String> lpGameBgImg = Var.defineAsset("gameBgImg", "gamebgimg");

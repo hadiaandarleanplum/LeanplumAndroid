@@ -32,6 +32,11 @@ public class GameActivity extends AppCompatActivity {
         }
     };
 
+    String name = "Turbo Boost";
+    int price = 0;
+    double speed =  0.0;
+    int timeout = 0;
+
     //public static Var<String> drawableColor = Var.define("drawableColor", "#ffffff"); //#246697 or #ffffff
 
     @Override
