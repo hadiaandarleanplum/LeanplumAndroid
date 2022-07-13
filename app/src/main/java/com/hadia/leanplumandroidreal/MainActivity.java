@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick (View v){
                 EditText textUsername = findViewById(R.id.textUsername);
                 Leanplum.setUserId(textUsername.getText().toString());
+                attributes.put("email", "hadia.andar@leanplum.com");
+                attributes.put("Application Language", "English");
+                Leanplum.setUserAttributes(attributes);
                 System.out.println(textUsername.getText().toString());
                 startActivity(new Intent(MainActivity.this, GameActivity.class));
             }

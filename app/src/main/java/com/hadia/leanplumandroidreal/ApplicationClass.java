@@ -58,6 +58,7 @@ public class ApplicationClass extends Application {
         // Insert your API keys here.
         if (BuildConfig.DEBUG) {
             Leanplum.setAppIdForDevelopmentMode("app_xvhLIDh3sIs71lx6yMYEW8LhhodWlFwvAUPeM4JoCSQ", "dev_nUVY7kDD4NFROS0HSBB8c1UDnRwb17tb5d1smWQI93o");
+            //Leanplum.setAppIdForProductionMode("app_xvhLIDh3sIs71lx6yMYEW8LhhodWlFwvAUPeM4JoCSQ", "prod_wu6BfCX0f4MY6lRgqDytTUWPxDYZOIEbS0MqZgIFKGk");
         } else {
             Leanplum.setAppIdForProductionMode("app_IF2eLLGxH8jme6fyd4qe3AnJDPuyuV2W6mYLMORepkQ", "dev_08KT3uYYrZdwku6wgMOiZywlYETW6r8j9XetCriYdlM");
         }
