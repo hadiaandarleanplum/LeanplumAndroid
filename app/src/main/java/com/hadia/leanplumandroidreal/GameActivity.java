@@ -79,8 +79,13 @@ public class GameActivity extends AppCompatActivity {
             public void onClick (View v){
                 Map<String, Object> params = new HashMap<String, Object>();
                 params.put("gameStatus", "Win");
+                params.put("state", "1");
+
                 Leanplum.track("btnClick", params);
                 System.out.println("WIN CLICKED");
+
+                //params.put("gameStatus", "Lower");
+                //Leanplum.track("btnClick", params);
             }
         });
 
@@ -90,6 +95,8 @@ public class GameActivity extends AppCompatActivity {
             public void onClick (View v){
                 Map<String, Object> params = new HashMap<String, Object>();
                 params.put("gameStatus", "Lose");
+                params.put("state", "2");
+
                 Leanplum.track("btnClick", params);
                 System.out.println("LOSE CLICKED");
             }
@@ -101,9 +108,16 @@ public class GameActivity extends AppCompatActivity {
             public void onClick (View v){
                 Leanplum.track("Reset");
                 System.out.println("RESET CLICKED");
+
+                //Map<String, Object> params = new HashMap<String, Object>();
+                //params.put("gameStatus", "lower");
+                //Leanplum.track("btnClick", params);
                 //maybe do a push notif if they press reset and then put the game on bg or dont play with it for a while
             }
         });
+
+        //IAM Handler
+
 
 
 

@@ -61,5 +61,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, GameActivity.class));
             }
         });
+
+        //trigger no push event
+        Button btnNoPush = findViewById(R.id.btnNoPush);
+        btnNoPush.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                System.out.println("No Push");
+                Leanplum.track("noPush");
+            }
+        });
     }
 }

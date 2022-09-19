@@ -95,5 +95,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLoginUser" />
 
+    <Button
+        android:id="@+id/btnNoPush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Push"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="578dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
